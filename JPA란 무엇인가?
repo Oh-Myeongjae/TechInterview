@@ -1,0 +1,4 @@
+JPA는 자바 진영에서 ORM(Object-Relational Mapping) 기술 표준으로 사용되는 인터페이스의 모음이다. 
+그 말은 즉, 실제적으로 구현된것이 아니라 구현된 클래스와 매핑을 해주기 위해 사용되는 프레임워크이다.
+ORM이란 애플리케이션 Class와 RDB(Relational DataBase)의 테이블을 연결(mapping)한다는 뜻이다.
+
