@@ -1,1 +1,21 @@
+Spring Framework란
+의존성 주입(DI)과 제어의 역전(IoC), 관점지향프로그래밍(AOP)과 같은 특징을 가진, 자바 생태계에 가장 대중적인 개발 프레임워크입니다.
+이 특징들로 인해서 결합도를 낮춰(Loose coupling) 유연한 개발이 가능하게 합니다.
+하지만, 기능이 많은 만큼 환경설정이 복잡합니다.
 
+Spring Boot란
+Spring을 사용하기 위한 복잡한 환경설정을 사용자가 편하게 사용하도록 돕는 역할을 해줍니다.
+
+1. Dependency
+Spring Framework의 경우 dependency를 설정해줄 때 설정 파일이 매우 길고, 모든 dependency에 대해 버전 관리도 하나하나 해줘야 합니다.
+Spring Boot의 경우 dependency를 Spring Framework보다 쉽게 설정해 줄 수 있습니다. 버전 관리도 자동으로 해줍니다.
+2. Configuration
+Spring Framework의 경우 configuration설정을 할 때도 매우 길고, 모든 어노테이션 및 빈 등록 등을 설정해 줘야 합니다.
+Spring Boot는 application.properties파일이나 application.yml파일에 설정하면 됩니다.
+또한, Spring Boot에는 AutoConfiguration이라는 것이 있습니다.
+@SpringBootApplication이라는 어노테이션을 통해 많은 외부 라이브러리, 내장 톰캣 서버 등이 실행될 수 있습니다.
+3. 편리한 배포
+Spring Framework로 개발한 애플리케이션의 경우, war파일을 Web Application Server에 담아 배포했습니다.
+Spring Boot의 경우, Tomcat 이나 Jetty 같은 내장 WAS를 가지고 있기 때문에 jar 파일로 간편하게 배포할 수 있습니다.
+Spring Framework로 WAS를 정하고, 모든 설정을 마쳐 배포를 하는 것보다 훨씬 간단한 배포 방법입니다.
+-결론적으로 Spring Framework는 기존에 EJB를 대신해 자바 애플리케이션을 더 쉽게 만들 수 있게 해 주고, Spring Boot Framework는 Spring Framework보다 개발자가 더더욱 개발에만 집중할 수 있도록 도와주는 프레임워크입니다.
