@@ -1,4 +1,5 @@
-Spring Web MVC 패턴에서 Dispatcher Servlet은 tomcat 과 같은 서블릿 컨테이너를 통해 들어오는 모든 요청을 제일 앞에서 받아 요청에 알맞는 Controller에 위임해주는 역할을 수행합니다. 
+Spring Web MVC 패턴에서 Dispatcher Servlet은 tomcat 과 같은 서블릿 컨테이너를 
+통해 들어오는 모든 요청을 제일 앞에서 받아 요청에 알맞는 Controller에 위임해주는 역할을 수행합니다. 
 
 tip) Front Controller → 서블릿 컨테이너 제일 앞단에서 서버로 오는 모든 요청을 받아 처리하는 컨트롤러
 tip) Servlet 이란 → 동적 웹 페이지를 만들 때 사용되는 자바 기반의 웹 애플리케이션 프로그래밍 기술이다.
