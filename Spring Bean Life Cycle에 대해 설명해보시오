@@ -1,1 +1,10 @@
-
+스프링 빈은 IoC 컨테이너에 의해 관리됨
+빈의 생성부터 소멸이 IoC 컨테이너에 의해 처리됨
+1. IoC 컨테이너 생성
+2. 스프링 빈 생성
+  @Component 어노테이션이 붙은 클래스 @Controller @Service @Repository
+  @Configure 어노테이션이 붙은 클래스의 @Bean 어노테이션이 붙은 메서드에서 반환하는 객체
+3. 컨테이너에 의한 의존관계 주입
+4. 초기화 메서드 호출 (@PostConstruct, 초기값 설정 등)
+5. 사용
+6. 소멸 메서드 호출 (@PreDestroy, 메모리 반납, 커넥션 종료 등)
