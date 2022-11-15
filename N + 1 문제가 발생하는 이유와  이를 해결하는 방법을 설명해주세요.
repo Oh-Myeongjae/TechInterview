@@ -1,0 +1,9 @@
+JPA 엔티티와 실제 테이블에 데이터가 저장되는 방식이 다르기 때문에 연관관계에 있는 엔티티들을 불러오는 과정에서 추가적인 쿼리가 발생하게 됩니다. 
+parentRepository.findAll() → select * from parent
+fetchType이 EAGER라면 엔티티를 조회하는 시점에, LAZY라면 연관관계에 있는 엔티티를 사용하는 시점에 N+1 문제가 발생합니다.
+parent.getChildren() → select * from child where child.parentId = parentId
+연관관계에 있는 엔티티들을 한번의 쿼리를 통해 불러오도록 JPQL의 fetch join을 설정하거나, @EntityGraph 어노테이션을 사용하거나 BatchSize를 설정하는 방법으로 해당 문제를 해결할 수 있습니다. + @QueryProjection을 통한 DTO 설정
+select * from parent inner join child on child.parentId = parent.id
+@EntityGraph를 통해 JPA과 fetch join을 해결할 수 있으나 .. 다음과 같은 문제가 발생한다. 
+카타시안 곱 문제 → 이걸 또 해결하는 방법이 어쩌고 저쩌고
+
