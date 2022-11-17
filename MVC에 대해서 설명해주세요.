@@ -1,1 +1,10 @@
+MVC란 Model-View-Controller의 약자로 애플리케이션을 세 가지 역할로 구분한 개발 방법론
+Controller를 통해 User는 신호를 호출하고,
+Model는 데이터베이스나, 파일의 데이터소스를 제어,연산 후 출력을 송신, 
+Contoller는 Model Return한 정보를 View 반영하면
+View는 업데이트된 정보를 User에게 보여준다.
 
+ 이러한 패턴은 사용자의 인터페이스(사용자 UI로직)로부터, 비즈니스 로직을 분리하여, 서로의 영향없이 유지보수를 쉽게 해준다.
+또한 Model, View가 다른 컴포넌트에 종속되지않아 어플리케이션의 확장성, 유연성에 유리함.
+
+다만 의존성에 따라 Controller에 다수의 Model과 View 복잡하게 연결되어 있는  상황이 나온다.
