@@ -1,1 +1,22 @@
+JOIN정의 : 두 개 이상의 테이블들을 연결 또는 결합하여 데이터를 출력하는 것
+보통 Primary key혹은 Foreign key로 두 테이블을 연결함.
 
+사용이유 : 서로 관계있는 데이터가 여러 테이블로 나뉘어 저장되므로 각 테이블에 저장된 데이터를 효과적으로 검색하기 위해 조인이 필요, 
+또한 관계형 데이터베이스의 저장공간과 효율성 확장성의 이유.
+
+테이블 조인 종류: (벤다이어그램과 유사)
+INNER조인  : 양테이블의 KEY값기준 공통으로 들어가 있는 데이터 연결
+LEFT OUTER JOIN :  기준테이블의 값 + 테이블과 기준 테이블의 중복된 값
+RIGHT OUTER JOIN :  기준테이블의 값 + 테이블과 기준 테이블의 중복된 값
+FULL OUTER JOIN : 양테이블의 합집합, 즉 모든 데이터가 모두 출력
+CROSS JOIN : 양 테이블의 모든 경우의수를 표현
+SELF JOIN : 자기자신을 조인
+
+Join vs Fetch Join 차이 
+[ 일반 Join ]
+- Fetch Join과 달리 연관 Entity에 Join을 걸어도 실제 쿼리에서 SELECT 하는 Entity는 오직 JPQL에서 조회하는 주체가 되는 Entity만 조회하여 영속화
+- 조회의 주체가 되는 Entity만 SELECT 해서 영속화하기 때문에 데이터는 필요하지 않지만 연관 Entity가 검색 조건에는 필요한 경우에 주로 사용한다.
+[ Fetch Join ]
+- 조회의 주체가 되는 Entity 이외에 Fetch Join이 걸린 연관 Entity도 함께 SELECT 하여 모두 영속화
+- Fetch Join이 걸린 Entity 모두 영속화하기 때문에 FetchType이 LAZY인 Entity를 참조하더라도 이미 영속성 컨텍스트 안에 들어있기 때문에 
+  따로 쿼리가 실행되지 않은 채로 N+1 문제가 해결됨
