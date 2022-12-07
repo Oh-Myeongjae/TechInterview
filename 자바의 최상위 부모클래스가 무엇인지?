@@ -1,1 +1,12 @@
-java.lang.Object 클래스를 상속 받지 않은 클래스에는 "extends Object"가 생략되어 있음. 모든 클래스는 Object의 메서드를 사용할 수 있음 Object 클래스 메서드 - Object clone() : 객체를 복제 - boolean equals(Object object) : 두 개의 객체가 같은 지를 비교하여 같으며 true, 다르면 false를 반환 - void finalize() : 가비지 컬렉팅이 수행되기 전에 호출되며 객체가 점유하고 있던 자원을 해제함 - Class getClass() : 객체의 클래스명을 Class 형의 객체로 반환 - int hashCode() : 자바에서 객체를 식별하는 정수값인 해시 코드(16진수) 를 반환 - String toString() : 현재 객체의 문자열 표현을 반환 Object 클래스에서는 클래스이름@해쉬코드값 리턴 - void notify() : 대기중인 쓰레드 중 하나의 쓰레드를 다시 시작 - void notifyAll() : 대기중인 모든 쓰레드를 다시 시작 - void wait() : Thread의 작동을 중지하고 대기상태로 전환
+java.lang.Object 클래스를 상속 받지 않은 클래스에는 "extends Object"가 생략되어 있음. 
+모든 클래스는 Object의 메서드를 사용할 수 있음
+Object 클래스 메서드
+- Object clone() : 객체를 복제 
+- boolean equals(Object object) : 두 개의 객체가 같은 지를 비교하여 같으며 true, 다르면 false를 반환 
+- void finalize() : 가비지 컬렉팅이 수행되기 전에 호출되며 객체가 점유하고 있던 자원을 해제함 
+- Class getClass() : 객체의 클래스명을 Class 형의 객체로 반환 
+- int hashCode() : 자바에서 객체를 식별하는 정수값인 해시 코드(16진수) 를 반환 
+- String toString() : 현재 객체의 문자열 표현을 반환 Object 클래스에서는 클래스이름@해쉬코드값 리턴 
+- void notify() : 대기중인 쓰레드 중 하나의 쓰레드를 다시 시작 
+- void notifyAll() : 대기중인 모든 쓰레드를 다시 시작 
+-void wait() : Thread의 작동을 중지하고 대기상태로 전환
