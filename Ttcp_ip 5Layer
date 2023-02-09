@@ -1,12 +1,16 @@
-TCP/IP(Transfer Control Protocol/Internet Protocol)는 미국 국방부(DoD)에서 정의한 네트워크 통신 표준 모델이다. OSI 모형이 아니라 TCP/IP가 산업 표준인 이유는 TCP/IP가 OSI보다 더 먼저 사용되었기 때문이다.
+TCP/IP(Transfer Control Protocol/Internet Protocol)는 미국 국방부(DoD)에서 정의한 네트워크 통신 표준 모델이다. 
+OSI 모형이 아니라 TCP/IP가 산업 표준인 이유는 TCP/IP가 OSI보다 더 먼저 사용되었기 때문이다.
 
-TCP/IP와 OSI는 네트워크 통신 모델의 표준이라는 공통점이 있다. 이들의 가장 큰 차이는, TCP/IP는 OSI의 상위 레이어와 하위 레이어를 통합해서 더 간단하게 표현했다는 것이다.
+TCP/IP와 OSI는 네트워크 통신 모델의 표준이라는 공통점이 있다. 
+
+이들의 가장 큰 차이는, TCP/IP는 OSI의 상위 레이어와 하위 레이어를 통합해서 더 간단하게 표현했다는 것이다.
 
 
-
-위 그림에서 가운데에 보이는 TCP/IP 모델은 최초로 정의된 TCP/IP 모델이다. 아래와 같이 OSI의 7계층을 간소화해서 4계층으로 표현했다.
-
+아래와 같이 OSI의 7계층을 간소화해서 4계층으로 표현했다.
 Application + Presentation + Session → Application
 Network → Internet
 Data-Link + Physical → Link
-하지만, 인터넷 개발 이후 꾸준히 표준이 갱신되면서 하위 레이어가 다시 세분화되었고, 오른쪽의 TCP/IP Updated 모델이 탄생했다. TCP/IP Updated의 5계층 모델은 Link를 다시 두 레이어로 세분화하고, Internet 명칭을 Network로 다시 변경했다는 차이가 있다. TCP/IP Updated 모델은 현재 전 세계 표준으로 적용되고 있다.
+
+하지만, 인터넷 개발 이후 꾸준히 표준이 갱신되면서 하위 레이어가 다시 세분화되었고, 오른쪽의 TCP/IP Updated 모델이 탄생했다. 
+TCP/IP Updated의 5계층 모델은 Link를 다시 두 레이어로 세분화하고, Internet 명칭을 Network로 다시 변경했다는 차이가 있다. 
+TCP/IP Updated 모델은 현재 전 세계 표준으로 적용되고 있다.
