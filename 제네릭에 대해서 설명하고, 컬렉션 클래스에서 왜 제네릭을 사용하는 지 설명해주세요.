@@ -1,1 +1,96 @@
+/*
+제네릭이란 ?
+제네릭이란  
 
+다양한 타입의 객체들을 다루는 메서드나 컬렉션 클래스에 객체의 타입을 미리 명시해줌으로써 번거로운 형변환을 줄여주고  
+컴파일 시에 객체의 타입을 체크하기 때문에 런타임에 발생할 수 있는 오류를 줄여준다.  
+
+제네릭 클래스나 컬렉션 클래스에 < > 부호를 붙이고 타입변수나 타입을 적어주면 된다. 
+
+* 타입변수 - Type(T), Element(E), Key(K), Value(V) 등이 있다.
+상황에 맞게 의미있는 문자를 선택해서 사용하는 것이 좋다.
+JDK1.8부터 도입된 개념으로 최근에 자바를 접해본 사람의 입장으로는 처음부터 제네릭을 사용했기 때문에 뭐가 좋은점인지 크게 와닿지 않아서 제네릭 사용전과 비교를 해봤다.
+
+< 제네릭 사용 전 >
+클래스는 다양한 타입의 객체를 저장할 수 있다.
+
+box에 "AAA"라는 String 타입을 저장한 것처럼 보이지만 실제는 Object 타입으로 저장이 된다.
+
+따라서 저장한 값을 꺼내올 때는 (String) 타입으로 형변환을 해줘야한다.
+
+형변환을 해주지 않으면 빨간줄과 함께 캐스팅 에러가 날 것이다.
+
+class Box {
+    Object item;
+
+    void setItem(Object item) {this.item = item;}
+    Object getItem() {return item;}
+}
+
+public class JavaChapter {
+
+    public static void main(String[] args) {
+        Box box = new Box();
+
+        box.setItem("AAA");
+
+        String a = (String) box.getItem();
+        System.out.println(a);
+        
+    }
+}
+< 제네릭 사용 후 >
+box 객체를 생성할 때 타입변수 T를 실제 타입으로 지정해줬기 때문에
+
+각 객체는 String 타입과 Intetger 타입만 저장하고,
+
+꺼내올 때도 타입변환이 일어나지 않는다.
+
+class Box<T> {
+    T item;
+
+    void setItem(T item) {this.item = item;}
+    T getItem() {return item;}
+}
+
+public class JavaChapter {
+
+    public static void main(String[] args) {
+        Box<String> sbox = new Box<>();
+        Box<Integer> ibox = new Box<>();
+
+        sbox.setItem("AAA");
+        ibox.setItem(1234);
+
+        System.out.println(sbox.getItem());
+        System.out.println(ibox.getItem());
+        
+    }
+}
+실행결과
+
+AAA
+1234
+아래와 같이 타입변수를 선언하지 않고 바로 타입을 지정해줄 수도 있다.
+
+class Box<String> {
+    String item;
+
+    void setItem(String item) {this.item = item;}
+    String getItem() {return item;}
+}
+
+public class JavaChapter {
+
+    public static void main(String[] args) {
+        Box<String> box = new Box<>();
+//        Box<Object> box = new Box<>();
+
+        box.setItem("AAA");
+
+        System.out.println(box.getItem());
+        
+    }
+}
+
+*/
